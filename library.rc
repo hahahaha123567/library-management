@@ -1,0 +1,734 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#include ""res\\library.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#if !defined(_AFXDLL)\r\n"
+    "#include ""l.CHS\\afxprint.rc""        // 打印/打印预览资源\r\n"
+    "#include ""l.CHS\\afxribbon.rc""        // MFC 功能区和控制条资源\r\n"
+    "#endif\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\library.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+IDR_MAINFRAME_256       BITMAP                  "res\\Toolbar256.bmp"
+
+IDB_BOOK                BITMAP                  "book.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+IDR_MAINFRAME_256 TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    MENUITEM "图书查询",                        ID_QUERY
+    MENUITEM "借书",                          ID_BORROW_BOOK
+    MENUITEM "还书",                          ID_RETURN_BOOK
+    POPUP "借书证管理"
+    BEGIN
+        MENUITEM "增加借书证",                       ID_ADD_CARD
+        MENUITEM "删除借书证",                       ID_DELETE_CARD
+    END
+    POPUP "图书入库"
+    BEGIN
+        MENUITEM "单本入库",                        ID_SINGLE
+        MENUITEM "批量入库",                        ID_MANY
+    END
+END
+
+IDR_POPUP_EDIT MENU
+BEGIN
+    POPUP "编辑"
+    BEGIN
+        MENUITEM "剪切(&T)\tCtrl+X",              ID_EDIT_CUT
+        MENUITEM "复制(&C)\tCtrl+C",              ID_EDIT_COPY
+        MENUITEM "粘贴(&P)\tCtrl+V",              ID_EDIT_PASTE
+    END
+END
+
+IDR_HELP_MENU MENU
+BEGIN
+    MENUITEM "关于 library(&A)...",           ID_APP_ABOUT
+END
+
+IDR_THEME_MENU MENU
+BEGIN
+    MENUITEM "Office 2007 (蓝色样式)(&B)",      ID_VIEW_APPLOOK_OFF_2007_BLUE
+    MENUITEM "Office 2007 (黑色样式)(&L)",      ID_VIEW_APPLOOK_OFF_2007_BLACK
+    MENUITEM "Office 2007 (银色样式)(&S)",      ID_VIEW_APPLOOK_OFF_2007_SILVER
+    MENUITEM "Office 2007 (水绿色样式)(&A)",     ID_VIEW_APPLOOK_OFF_2007_AQUA
+    MENUITEM "Windows 7(&D)",               ID_VIEW_APPLOOK_WINDOWS_7
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 library"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "library，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2017",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_QUERY DIALOGEX 0, 0, 537, 272
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "图书查询"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "查询",IDOK,111,240,50,14
+    PUSHBUTTON      "关闭",IDCANCEL,241,240,50,14
+    COMBOBOX        ID_CONDITION1,28,64,48,74,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_KEYWORD1,93,63,100,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_AND_OR1,203,63,46,42,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        ID_CONDITION2,28,91,48,74,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_KEYWORD2,93,91,100,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_AND_OR2,203,91,46,48,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        ID_CONDITION3,28,122,48,74,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_KEYWORD3,93,122,100,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_AND_OR3,203,122,46,44,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        ID_CONDITION4,28,153,48,74,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_KEYWORD4,93,153,100,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_AND_OR4,203,153,46,45,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CONDITION5,28,181,48,49,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CONDITION6,28,211,48,43,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_KEYWORD5,93,181,39,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_KEYWORD6,153,181,39,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_AND_OR5,203,182,46,45,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "---",IDC_STATIC,138,184,9,8
+    EDITTEXT        IDC_KEYWORD7,93,211,39,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_KEYWORD8,153,211,39,14,ES_AUTOHSCROLL
+    LTEXT           "---",IDC_STATIC,138,214,9,8
+    LISTBOX         IDC_LIST_RESULT,281,35,228,89,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_DETAIL,281,151,228,79,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "结果列表",IDC_STATIC,379,19,33,8
+    LTEXT           "详细信息",IDC_STATIC,381,136,33,8
+    LTEXT           "检索字段",IDC_STATIC,36,46,33,8
+    LTEXT           "与/或",IDC_STATIC,216,46,20,8
+    LTEXT           "检索词",IDC_STATIC,135,46,25,8
+    LTEXT           "排序",IDC_STATIC,61,20,17,8
+    COMBOBOX        IDC_ORDER_ITEM,91,17,69,99,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ORDER_DIR,171,17,48,52,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_BORROW_BOOK DIALOGEX 0, 0, 457, 202
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "借书"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "借书",IDOK,79,154,50,14
+    PUSHBUTTON      "取消",IDCANCEL,133,154,50,14
+    LTEXT           "借书证卡号",IDC_STATIC,40,36,41,8
+    LTEXT           "要借的书号",IDC_STATIC,41,115,41,8
+    PUSHBUTTON      "查询已借的书",IDC_HAVE_BORROWED1,101,72,84,14
+    EDITTEXT        IDC_CARDNUM1,101,34,121,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BOOKNUM1,101,113,122,14,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST_RESULT2,269,27,155,50,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_DETAIL2,269,100,157,83,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "查询结果",IDC_STATIC,329,12,33,8
+    LTEXT           "书目细节",IDC_STATIC,330,87,33,8
+END
+
+IDD_RETURN_BOOK DIALOGEX 0, 0, 457, 202
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "还书"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "还书",IDOK,79,154,50,14
+    PUSHBUTTON      "取消",IDCANCEL,133,154,50,14
+    LTEXT           "借书证卡号",IDC_STATIC,40,36,41,8
+    LTEXT           "要还的书号",IDC_STATIC,41,115,41,8
+    PUSHBUTTON      "查询已借的书",IDC_HAVE_BORROWED2,100,72,84,14
+    EDITTEXT        IDC_CARDNUM2,100,34,121,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BOOKNUM2,101,113,122,14,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST_RESULT3,269,27,155,50,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_DETAIL3,269,100,157,83,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "查询结果",IDC_STATIC,329,12,33,8
+    LTEXT           "书目细节",IDC_STATIC,330,87,33,8
+END
+
+IDD_ADD_CARD DIALOGEX 0, 0, 189, 173
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "增加借书证"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,45,142,50,14
+    PUSHBUTTON      "取消",IDCANCEL,99,142,50,14
+    LTEXT           "卡号",IDC_STATIC,31,17,17,8
+    LTEXT           "姓名",IDC_STATIC,31,49,17,8
+    LTEXT           "单位",IDC_STATIC,31,81,17,8
+    LTEXT           "类别",IDC_STATIC,31,114,17,8
+    EDITTEXT        IDC_INFO_CARDNUM,66,15,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO_NAME,66,47,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO_COMPANY,66,79,93,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INFO_CATEGORY,66,111,93,14,ES_AUTOHSCROLL
+END
+
+IDD_DELETE_CARD DIALOGEX 0, 0, 217, 152
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "删除借书证"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,58,107,50,14
+    PUSHBUTTON      "取消",IDCANCEL,112,107,50,14
+    LTEXT           "借书证号",IDC_STATIC,31,60,33,8
+    EDITTEXT        IDC_CARDNUMBER,79,58,111,14,ES_AUTOHSCROLL
+END
+
+IDD_SINGLE DIALOGEX 0, 0, 309, 176
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "单本入库"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "入库",IDOK,101,155,50,14
+    PUSHBUTTON      "取消",IDCANCEL,155,155,50,14
+    LTEXT           "书号",IDC_STATIC,25,24,17,8
+    LTEXT           "书名",IDC_STATIC,25,90,17,8
+    LTEXT           "出版社",IDC_STATIC,25,121,25,8
+    LTEXT           "年份",IDC_STATIC,167,24,17,8
+    LTEXT           "作者",IDC_STATIC,167,57,17,8
+    LTEXT           "价格",IDC_STATIC,167,90,17,8
+    LTEXT           "数量",IDC_STATIC,167,121,17,8
+    LTEXT           "类别",IDC_STATIC,25,57,17,8
+    EDITTEXT        IDC_ID,55,21,90,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NAME,55,87,90,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CATEGORY,55,54,90,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YEAR,193,21,90,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PRESS,55,118,90,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PRICE,193,87,90,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_AUTHOR,193,54,90,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TOTAL,193,118,90,14,ES_AUTOHSCROLL
+END
+
+IDD_MANY DIALOGEX 0, 0, 185, 171
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "批量入库"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "入库",IDOK,41,135,50,14
+    PUSHBUTTON      "取消",IDCANCEL,95,135,50,14
+    LTEXT           "文件路径",IDC_STATIC,76,37,33,8
+    EDITTEXT        IDC_PATH,35,72,116,14,ES_AUTOHSCROLL
+END
+
+IDD_LOGIN DIALOGEX 0, 0, 255, 163
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "admin登录"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "登录",IDOK,72,119,50,14
+    PUSHBUTTON      "取消",IDCANCEL,126,119,50,14
+    EDITTEXT        IDC_USERNAME,96,39,109,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD,96,77,110,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "管理员ID",IDC_STATIC,48,42,32,8
+    LTEXT           "密码",IDC_STATIC,56,79,17,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "library"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "library.exe"
+            VALUE "LegalCopyright", "TODO:  (C) <公司名>。  保留所有权利。"
+            VALUE "OriginalFilename", "library.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_QUERY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 530
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 265
+    END
+
+    IDD_BORROW_BOOK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 450
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_RETURN_BOOK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 450
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_ADD_CARD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 182
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_DELETE_CARD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_SINGLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_MANY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 248
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 156
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_QUERY AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_BORROW_BOOK AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_RETURN_BOOK AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ADD_CARD AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DELETE_CARD AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_SINGLE AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_MANY AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_LOGIN AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_QUERY DLGINIT
+BEGIN
+    ID_CONDITION1, 0x403, 5, 0
+0xe0c0, 0xf0b1, "\000" 
+    ID_CONDITION1, 0x403, 5, 0
+0xe9ca, 0xfbc3, "\000" 
+    ID_CONDITION1, 0x403, 7, 0
+0xf6b3, 0xe6b0, 0xe7c9, "\000" 
+    ID_CONDITION1, 0x403, 5, 0
+0xf7d7, 0xdfd5, "\000" 
+    IDC_AND_OR1, 0x403, 4, 0
+0x6e61, 0x0064, 
+    IDC_AND_OR1, 0x403, 3, 0
+0x726f, "\000" 
+    ID_CONDITION2, 0x403, 5, 0
+0xe0c0, 0xf0b1, "\000" 
+    ID_CONDITION2, 0x403, 5, 0
+0xe9ca, 0xfbc3, "\000" 
+    ID_CONDITION2, 0x403, 7, 0
+0xf6b3, 0xe6b0, 0xe7c9, "\000" 
+    ID_CONDITION2, 0x403, 5, 0
+0xf7d7, 0xdfd5, "\000" 
+    IDC_AND_OR2, 0x403, 4, 0
+0x6e61, 0x0064, 
+    IDC_AND_OR2, 0x403, 3, 0
+0x726f, "\000" 
+    ID_CONDITION3, 0x403, 5, 0
+0xe0c0, 0xf0b1, "\000" 
+    ID_CONDITION3, 0x403, 5, 0
+0xe9ca, 0xfbc3, "\000" 
+    ID_CONDITION3, 0x403, 7, 0
+0xf6b3, 0xe6b0, 0xe7c9, "\000" 
+    ID_CONDITION3, 0x403, 5, 0
+0xf7d7, 0xdfd5, "\000" 
+    IDC_AND_OR3, 0x403, 4, 0
+0x6e61, 0x0064, 
+    IDC_AND_OR3, 0x403, 3, 0
+0x726f, "\000" 
+    ID_CONDITION4, 0x403, 5, 0
+0xe0c0, 0xf0b1, "\000" 
+    ID_CONDITION4, 0x403, 5, 0
+0xe9ca, 0xfbc3, "\000" 
+    ID_CONDITION4, 0x403, 7, 0
+0xf6b3, 0xe6b0, 0xe7c9, "\000" 
+    ID_CONDITION4, 0x403, 5, 0
+0xf7d7, 0xdfd5, "\000" 
+    IDC_AND_OR4, 0x403, 4, 0
+0x6e61, 0x0064, 
+    IDC_AND_OR4, 0x403, 3, 0
+0x726f, "\000" 
+    IDC_CONDITION5, 0x403, 5, 0
+0xeac4, 0xddb7, "\000" 
+    IDC_CONDITION5, 0x403, 5, 0
+0xdbbc, 0xf1b8, "\000" 
+    IDC_CONDITION6, 0x403, 5, 0
+0xeac4, 0xddb7, "\000" 
+    IDC_CONDITION6, 0x403, 5, 0
+0xdbbc, 0xf1b8, "\000" 
+    IDC_AND_OR5, 0x403, 4, 0
+0x6e61, 0x0064, 
+    IDC_AND_OR5, 0x403, 3, 0
+0x726f, "\000" 
+    IDC_ORDER_ITEM, 0x403, 5, 0
+0xe9ca, 0xc5ba, "\000" 
+    IDC_ORDER_ITEM, 0x403, 5, 0
+0xe0c0, 0xf0b1, "\000" 
+    IDC_ORDER_ITEM, 0x403, 5, 0
+0xe9ca, 0xfbc3, "\000" 
+    IDC_ORDER_ITEM, 0x403, 7, 0
+0xf6b3, 0xe6b0, 0xe7c9, "\000" 
+    IDC_ORDER_ITEM, 0x403, 5, 0
+0xf7d7, 0xdfd5, "\000" 
+    IDC_ORDER_ITEM, 0x403, 5, 0
+0xdbbc, 0xf1b8, "\000" 
+    IDC_ORDER_ITEM, 0x403, 9, 0
+0xdcd7, 0xd8b2, 0xe9ca, 0xbfc1, "\000" 
+    IDC_ORDER_ITEM, 0x403, 5, 0
+0xe2bf, 0xe6b4, "\000" 
+    IDC_ORDER_DIR, 0x403, 5, 0
+0xfdc9, 0xf2d0, "\000" 
+    IDC_ORDER_DIR, 0x403, 5, 0
+0xb5bd, 0xf2d0, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 初始化失败。  请确保 OLE 库是正确的版本。"
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "library"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "library"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权信息\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "将活动窗口拆分为多个窗格\n拆分"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "清除所选内容\n清除"
+    ID_EDIT_CLEAR_ALL       "清除全部内容\n全部清除"
+    ID_EDIT_COPY            "复制所选内容，将其放入剪贴板\n复制"
+    ID_EDIT_CUT             "剪切所选内容，将其放入剪贴板\n剪切"
+    ID_EDIT_FIND            "查找指定的文本\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一操作\n重复"
+    ID_EDIT_REPLACE         "用其他文本替换特定的文本\n替换"
+    ID_EDIT_SELECT_ALL      "选定整个文档\n全选"
+    ID_EDIT_UNDO            "撤消上一操作\n撤消"
+    ID_EDIT_REDO            "重做上次撤消的操作\n重做"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n切换状态栏"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "更改窗口大小"
+    AFX_IDS_SCMOVE          "更改窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "将窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到上一个文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口并提示保存文档"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "将窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务列表"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STATUS_PANE1        "窗格 1"
+    IDS_STATUS_PANE2        "窗格 2"
+    IDS_TOOLBAR_STANDARD    "标准"
+    IDS_TOOLBAR_CUSTOMIZE   "自定义..."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_EDIT_MENU           "编辑"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#include "res\library.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#if !defined(_AFXDLL)
+#include "l.CHS\afxprint.rc"        // 打印/打印预览资源
+#include "l.CHS\afxribbon.rc"        // MFC 功能区和控制条资源
+#endif
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
