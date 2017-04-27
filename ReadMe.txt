@@ -48,8 +48,6 @@ borrow.h borrow.cpp
 card.h card.cpp
     MFC连接ODBC所自动创建的，CRecordSet的子类，分别对应数据库中的table，具有查询、更新等操作。
 
-/////////////////////////////////////////////////////////////////////////////
-
 Login.h, Login.cpp
 QueryDlg.h, QueryDlg.cpp
 BorrowDlg.h, BorrowDlg.cpp
@@ -60,6 +58,12 @@ SingleDlg.h, SingleDlg.cpp
 ManyDlg.h, ManyDlg.cpp
     实现功能的对话框
 
+/////////////////////////////////////////////////////////////////////////////
+
+to do:
+    调用open函数时卡顿
+    showDetail函数冗余
+    sql注入防范
 
 /////////////////////////////////////////////////////////////////////////////
 
