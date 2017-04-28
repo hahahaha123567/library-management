@@ -65,7 +65,7 @@ void SingleDlg::OnBnClickedOk()
 	m_bookSet.m_strFilter.Format("id = '%s'", m_id);
 	m_bookSet.Requery();
 	if (m_bookSet.IsEOF() == false) {
-		AfxMessageBox("已存在该书号");
+		AfxMessageBox(_T("已存在该书号"));
 		return;
 	}
 	m_bookSet.AddNew();
